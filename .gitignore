@@ -1,3 +1,7 @@
+# Emacs temporary files
+*~
+*#
+
 # Compiled files
 *.class
 
@@ -6,16 +10,8 @@ elements-harvester/*.jar
 elements-harvester/*.war
 elements-harvester/*.ear
 
-# IntelliJ IDEA
-.idea
-*.iml
-target/
-
 # Logs
 *.log
-
-# Subversion
-.svn*
 
 # Generated file during execution
 elements-harvester/example-scripts/example-elements/data/
