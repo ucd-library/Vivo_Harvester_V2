@@ -1,7 +1,6 @@
 #! /bin/bash
 
 d=/usr/local/vivo/harvester
-tar=~/elements-vivo-harvester-${VIVO_HARVESTER_VERSION}.tar.gz
 
 function initialize_state_txt() {
   echo '0'
