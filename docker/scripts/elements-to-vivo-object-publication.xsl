@@ -495,4 +495,3 @@
     <xsl:template match="api:object[@category='publication']" mode="customAdditions" />
 
 </xsl:stylesheet>
-

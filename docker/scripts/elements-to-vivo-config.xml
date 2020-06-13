@@ -280,7 +280,7 @@
             <rdf:type rdf:resource="http://purl.org/ontology/bibo/Article"/>
             <!-- <rdf:type rdf:resource="$$local$$otherPublication"/> -->
         </config:publication-type>
-		
+
 		<!-- Example of complex type mapping (for elements c-custom-type objects) using conditions -->
 		<!--
 		<config:publication-type type="c-custom-type">

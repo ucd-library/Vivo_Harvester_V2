@@ -79,4 +79,3 @@
         <!--todo: should the parent group have its children set too? are inferred - rightly or wrongly...-->
     </xsl:template>
 </xsl:stylesheet>
-
