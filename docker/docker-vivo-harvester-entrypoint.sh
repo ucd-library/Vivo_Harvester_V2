@@ -27,14 +27,23 @@ function initialize_state_txt() {
 if [[ ! -f ${d}/state.txt ]] ; then
   echo "Initializing ${d}"
   # Overwriting script files
-  cp $config/script/* $d/scripts
   initialize_state_txt > ${d}/data/state.txt
   ln -s ${d}/data/state.txt ${d}/state.txt
-#  [[ -d ${d}/data/other_data ]] || mkdir ${d}/data/other_data
 else
   echo "${d}/state.txt exists, previously initialized"
 fi
 
+# If script directory is empty, fill it with default
+if [[ ! -d ${d}/script ]]; do
+  echo "Adding Scripts"
+  mkdir ${d}/script;
+  for i in $config/script/*; do
+    n=$(basename $i)
+    expandVarsStrict <$i >${d}/script/${n}
+  done
+fi
+
+# Copy Properties expand vars, don't overwrite
 for i in $config/*.properties; do
   n=$(basename $i)
   if [[ ! -f ${d}/$n ]]; then
