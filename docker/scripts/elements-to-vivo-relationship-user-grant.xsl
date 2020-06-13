@@ -69,7 +69,6 @@
 
     <!--
         Output as part of relationship - Supports publication
-        <vivo:supportedInformationResource rdf:resource="http://vivo.mydomain.edu/individual/n4893"/>
     -->
     <xsl:template match="api:relationship[$grant-relationship-types/rel-types/rel-type[text() = current()/@type]]" mode="visible-relationship invisible-relationship">
 
@@ -115,7 +114,6 @@
                 <vivo:relatedBy rdf:resource="{svfn:objectURI($grant)}"/><!-- link to grant -->
                 <obo:RO_0000052 rdf:resource="{svfn:userURI($user)}"/><!-- link to user -->
 
-                <!-- vivo:dateTimeInterval rdf:resource="http://vivo.mydomain.edu/individual/n6127" / - link to date / time -->
                 <xsl:if test="api:is-visible='false'">
                     <vivo:hideFromDisplay>true</vivo:hideFromDisplay>
                 </xsl:if>

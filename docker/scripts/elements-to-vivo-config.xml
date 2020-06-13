@@ -13,10 +13,10 @@
 <config:main xmlns:config="http://www.symplectic.co.uk/vivo/namespaces/config" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
     <!-- The default base URI you are using for VIVO identifiers : may be overridden by one passed in from the java framework -->
-    <config:defaultbaseURI>http://vivo.mydomain.edu/individual/</config:defaultbaseURI>
+    <config:defaultbaseURI>${VIVO_BASEURI_PREFIX:-http://vivo.mydomain.edu/}individual/</config:defaultbaseURI>
 
     <!-- the class that internal users and groups should be flagged as being a member of-->
-    <config:internalClass>http://vivo.mydomain.edu/ontology/local#InternalClass</config:internalClass>
+    <config:internalClass>${VIVO_BASEURI_PREFIX:-http://vivo.mydomain.edu/}ontology/local#InternalClass</config:internalClass>
 
     <!-- Harvested by statement for the URI (leave blank if not required) -->
     <config:harvestedBy />

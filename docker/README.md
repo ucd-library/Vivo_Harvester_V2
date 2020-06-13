@@ -43,7 +43,7 @@ services:
       - VIVO_API_USERNAME=vivo@ucdavis.edu
       - VIVO_API_PASSWORD=vivo_root_password
       - VIVO_ELEMENTS_GRAPH=http://oapolicy.universityofcalifornia.edu
-      - VIVO_BASEURI=http://experts.library.ucdavis.edu/individual
+      - VIVO_BASEURI_PREFIX=http://experts.library.ucdavis.edu/
     volumes:
        - ./data:/usr/local/vivo/harvester/data
 
