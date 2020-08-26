@@ -933,7 +933,7 @@
                                 <xsl:copy-of select="$result-not-using-excluded-data" />
                             </xsl:when>
                             <xsl:otherwise>
-                                <xsl:variable name="no-exclusions" select="/.." />
+                                <xsl:variable name="no-exclusions" select="()" />
                                 <xsl:copy-of select="svfn:_getFirstNonExcludedRecord($object, $fieldName, $select-by, $no-exclusions, 1)" />
                             </xsl:otherwise>
                         </xsl:choose>
@@ -1143,7 +1143,7 @@
             <xsl:with-param name="objectURI" select="$vcardFormattedNameURI" />
             <xsl:with-param name="rdfNodes">
                 <xsl:call-template name="_concat_nodes_if">
-                    <xsl:with-param name="nodesRequired" select="/..">
+                    <xsl:with-param name="nodesRequired" select="()">
                         <!--<vcard:formattedName><xsl:value-of select="normalize-space(concat($lastName, ' ', $initials))" /></vcard:formattedName>-->
                     </xsl:with-param>
                     <xsl:with-param name="nodesToAdd">
