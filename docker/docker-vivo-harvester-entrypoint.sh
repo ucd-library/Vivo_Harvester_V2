@@ -34,12 +34,16 @@ else
 fi
 
 # If script directory is empty, fill it with default
-if [[ ! -d ${d}/script ]]; do
+if [[ ! -d ${d}/scripts ]]; then
   echo "Adding Scripts"
-  mkdir ${d}/script;
-  for i in $config/script/*; do
+  mkdir ${d}/scripts;
+  for i in $config/scripts/*.xml; do
     n=$(basename $i)
-    expandVarsStrict <$i >${d}/script/${n}
+    expandVarsStrict <$i >${d}/scripts/${n}
+  done
+  for i in $config/scripts/*.xsl $config/scripts/*.ns; do
+    n=$(basename $i)
+    cp $i ${d}/scripts/${n}
   done
 fi
 
