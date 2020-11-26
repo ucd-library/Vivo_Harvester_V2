@@ -21,7 +21,6 @@ LOG_FILE_PATH_FRAGMENT="logs/harvests_run.log"
 
 #Variable for optimizations to the Java virtual machine. (Borrowed from Vivo Harvester Diff script)
 #-server                                                Run in server mode, which takes longer to start but runs faster
-#-d64                                                   Use 64-bit JVM
 #-XX:+UseParallelOldGC                  Use high throughput parallel GC on old generation
 #-XX:+DisableExplicitGC                 Prevent direct calls to garbage collection in the code
 #-XX:+UseAdaptiveGCBoundary             Allow young/old boundary to move
@@ -30,7 +29,7 @@ LOG_FILE_PATH_FRAGMENT="logs/harvests_run.log"
 #-Xnoclassgc                                    Disable collection of class objects
 #-XX:ParallelGCThreads=3                Maximum number of Parallel garbage collection tasks
 
-HARVESTER_JAVA_OPTS="-server -d64 -XX:+UseParallelOldGC -XX:+DisableExplicitGC -XX:+UseAdaptiveGCBoundary -XX:-UseGCOverheadLimit -XX:SurvivorRatio=16 -Xnoclassgc -XX:ParallelGCThreads=3"
+HARVESTER_JAVA_OPTS="-server -XX:+UseParallelOldGC -XX:+DisableExplicitGC -XX:+UseAdaptiveGCBoundary -XX:-UseGCOverheadLimit -XX:SurvivorRatio=16 -Xnoclassgc -XX:ParallelGCThreads=3"
 #OPTS="-Xms$MIN_MEM -Xmx$MAX_MEM $HARVESTER_JAVA_OPTS -Dharvester-task=$HARVEST_NAME.$DATE"
 OPTS="-Xms$MIN_MEM -Xmx$MAX_MEM $HARVESTER_JAVA_OPTS"
 

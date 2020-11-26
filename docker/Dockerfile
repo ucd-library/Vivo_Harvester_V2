@@ -1,4 +1,4 @@
-from maven:3-jdk-8
+from maven:3.6.3-openjdk-11
 
 ARG repo=https://github.com/ucd-library/Vivo_Harvester_V2.git
 ENV VIVO_HARVESTER_VERSION=1.1.0
